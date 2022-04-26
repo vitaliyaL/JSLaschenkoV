@@ -52,12 +52,12 @@ if (confBlock) {
         if (confMod) {
           let promMod = prompt("Введите название модификатора:");
           if (promMod) {
-            confirm(promBlock +'_'+ promEl +'_'+ promMod);
+            confirm(promBlock + "_" + promEl + "_" + promMod);
           } else {
-            confirm(promBlock +'_'+ promEl);
+            confirm(promBlock + "_" + promEl);
           }
         } else {
-          confirm(promBlock +'_'+ promEl);
+          confirm(promBlock + "_" + promEl);
         }
       } else {
         confirm(promBlock);
@@ -70,4 +70,43 @@ if (confBlock) {
   }
 } else {
   confirm("Элементу не присвоен класс.");
+}
+//Задание5////////////////////////////////////////////////////////
+let conf1 = prompt("Задание 5 \nВведите первое число:");
+if (conf1 && !isNaN(+conf1)) {
+  conf1 = +conf1;
+  let conf2 = prompt("Введите второе число:");
+  if (conf2 && !isNaN(+conf2)) {
+    conf2 = +conf2;
+    let plus = conf1 + conf2;
+    let minus = conf1 - conf2;
+    let div = conf1 / conf2;
+    let mult = conf1 * conf2;
+    let conf = prompt(
+      "Введите операцию: | plus or + | minus or - | div or / | mult or * |"
+    );
+    if (conf === "plus" || conf === "+") {
+      alert(plus);
+    } else if (conf === "minus" || conf === "-") {
+      alert(minus);
+    } else if (conf === "div" || conf === "/") {
+      if (conf2 === 0) {
+        alert("На ноль делить нельзя");
+      } else {
+        alert(div);
+      }
+    } else if (conf === "mult" || conf === "*") {
+      alert(mult);
+    } else {
+      alert("Неверная операция");
+    }
+  } else if (isNaN(conf2)) {
+    alert("Данные некорректны!");
+  } else {
+    alert("Вы ввели не все данные");
+  }
+} else if (isNaN(conf1)) {
+  alert("Данные некорректны!");
+} else {
+  console.log("");
 }
