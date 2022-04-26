@@ -1,9 +1,18 @@
 "use strict";
-
-let message = prompt("Введите ваше сообщение:");
-if(message){
-alert(message);
+//Задание1////////////////////////////////////////////////////////////
+let message = prompt("Задание 1 \nВведите ваше сообщение:");
+if (message) {
+  alert(message);
+} else {
+  console.log("");
+}
+//Задание2////////////////////////////////////////////////////////
+let num1 = +prompt("Задание 2 \nВведите первое число:");
+let num2 = +prompt("Введите второе число:");
+let num3 = +prompt("Введите третье число:");
+if (num1 && num2 && num3) {
+  alert(num1 + num2 + num3);
 }
 else{
-    console.log('');
+  alert("Вы ввели не все данные!");
 }
